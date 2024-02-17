@@ -12,10 +12,20 @@ string convert_matrix_to_string(int matrix[vertically][horizontally]);
 int counting_saddle_points(int matrix[vertically][horizontally]);
 
 int main() {
+	int max = 5, min = 1;
 
-	int max = 2, min = 1;
-	int matrix[vertically][horizontally];
+	///////////////Check///////////////
+	int matrix[vertically][horizontally] = {{2, 3, 3, 4, 5, 6},
+											{1, 3, 3, 3, 3, 3},
+											{1, 3, 3, 4, 5, 6}};
 
+	cout << convert_matrix_to_string(matrix) << endl;
+
+	cout << "Result - " << counting_saddle_points(matrix) << endl;
+	///////////////Check///////////////
+
+
+	
 	random_init_matrix(matrix, max, min);
 
 	cout << convert_matrix_to_string(matrix) << endl;
